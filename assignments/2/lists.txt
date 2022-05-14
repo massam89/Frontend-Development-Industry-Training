@@ -1,0 +1,21 @@
+a. An unordered shopping list of your favorite foods
+	-pizza
+	-kebab
+	-soup
+b. An ordered list of todo’s you need to get done today
+	1-walking
+	2-have breakfast
+	3-do assignments
+c. An unordered list inside of an ordered list, of places you’d like to visit someday
+	1-place I like to visit one dat
+		-Germany
+		-Italy
+		-India
+d. An ordered list inside of an unordered list, of your all time top 5 favorite video
+games or movies
+	-all time top5 favorite video game or movies
+		1- wiplash
+		2- theory of everything
+		3- twelve angry men
+		4- Interstellar
+		5- Gravity
