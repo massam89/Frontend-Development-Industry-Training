@@ -1,0 +1,158 @@
+@import url(base.css);
+
+.container {
+    padding: 0 150px;
+}
+
+body {
+    font-family: roboto;
+}
+
+header {
+    background-color: var(--color1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 24px;
+    color: var(--color2)
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--color3);
+    font-size: 18px;
+}
+
+.hero {
+    background-color: var(--color1);
+    padding: 100px 0;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+}
+
+.hero img {
+    border-radius: 5px;
+    width: 50%;
+}
+
+.hero h2 {
+    font-size: 48px;
+    color: var(--color2);
+    font-weight: bold;
+}
+
+.hero p {
+    color: var(--color3);
+    font-size: 18px;
+}
+
+.hero button {
+    background-color: var(--color4);
+    border: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+    color: var(--color2);
+    margin-top: 10px;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.information h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--color1);
+    margin: 25px;
+}
+
+.information ul {
+    display: flex;
+    text-align: center;
+}
+
+.information ul li {
+    width: 150px;
+    list-style: none;
+    margin: 0 20px;
+    color: var(--color1);
+    font-size: 14px;
+}
+
+.information img {
+    width: 150px;
+    height: 150px;
+    border: 3px solid var(--color4);
+    border-radius: 10px;
+}
+
+.quote {
+    background-color: var(--color3);
+    font-size: 36px;
+    font-style: italic;
+    color: var(--color1);
+    padding: 100px 350px;
+    margin-top: 80px;
+}
+
+.quote span {
+    font-weight: bold;
+    font-style: normal;
+    float: right;
+}
+
+.contact {
+    width: 80%;
+    background-color: var(--color4);
+    margin: 75px auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 20px;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.contact h3 {
+    color: var(--color2)
+}
+
+.contact p {
+    color: var(--color3);
+}
+
+.contact button {
+    background-color: var(--color4);
+    border: 1px solid white;
+    padding: 5px 20px;
+    border-radius: 5px;
+    color: var(--color2);
+}
+
+footer {
+    background-color: var(--color1);
+    text-align: center;
+    color: var(--color3);
+    padding: 25px;
+    font-size: 14px;
+}
