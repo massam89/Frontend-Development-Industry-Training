@@ -19,7 +19,7 @@
 ## 7. From inside to outside, what is the order of box-model properties?
 `content-padding-border-margin`
 
-# 8. What does the box-sizing CSS property do?
+## 8. What does the box-sizing CSS property do?
 `The CSS box-sizing property allows us to include the padding and border in an element's total width and height.* { box-sizing: border-box;}`
 
 ## 9. What is the difference between the standard and alternative box model?
@@ -68,7 +68,7 @@
 `justify-content => horizontally or main axis
 align-items => vertically or cross axis`
 
-# 24. How do you use flexbox to completely center a div inside a flex container?
+## 24. How do you use flexbox to completely center a div inside a flex container?
 ` justify-contetn: center;
 align-items: center;`
 
