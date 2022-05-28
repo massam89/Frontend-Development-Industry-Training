@@ -35,10 +35,10 @@
 `margin`
 
 ## 13. What is the difference between a block element and an inline element?
-   ` Block elements are a kind of blocks where there are many elements in a line itself. While inline elements take up the space of an entire line and there will be only one line within the space width. Inline elements do not respect the top and bottom margins but only the left and right and also consider the padding`
+   ` Block level elements take up as much space as possible by default. Each block level element will start a new line on the page, stacking down the page. In addition to stacking vertically, block level elements will also take up as much horizontal space as possible. While inline elements take up the space of an entire line and there will be only one line within the space width. Inline elements do not respect the top and bottom margins but only the left and right and also consider the padding`
 
 ## 14. What is the difference between an inline element and an inline-block element?
-  `  Compared to display: inline , the major difference is that inline-block allows to set a width and height on the element. Also, with display: inline , top and bottom margins & paddings are not respected, and with display: inline-block they are.`
+  `  Compared to display: inline , the major difference is that inline-block allows to set a width and height on the element. Also, with display: inline , top and bottom, margins & paddings are not respected, and with display: inline-block they are.`
 
 ## 15. Is an h1 block or inline?
   `  block`
@@ -53,7 +53,7 @@
   `  inline`
 
 ## 19. What’s the difference between a flex container and a flex item?
-   ` Some of them are meant to be set on the container (parent element, known as “flex container”) whereas the others are meant to be set on the children (said “flex items”)`
+   ` Some of them are meant to be set on the container (parent element, known as “flex container”) whereas the others are meant to be set on the children (said “flex items”), The direct child elements of a flex container automatically becomes flexible (flex) items.`
 
 ## 20. How do you create a flex item?
    ` Add display:flex to container`
@@ -69,7 +69,7 @@
 align-items => vertically or cross axis`
 
 ## 24. How do you use flexbox to completely center a div inside a flex container?
-` justify-contetn: center;
+` justify-content: center;
 align-items: center;`
 
 ## 25. What’s the difference between justify-content: space-between and justify-content: space-around?
