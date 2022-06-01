@@ -43,7 +43,7 @@ function playRound(playerSelection, computerSelection) {
         if(roundMessage === 'Wrong input') {
             i--;
         } else if (roundMessage === 'Draw'){
-            
+            continue
         } else if (roundMessage.search('win') === -1) {
             computerScore++
         } else if (roundMessage.search('lose') === -1){
@@ -52,5 +52,20 @@ function playRound(playerSelection, computerSelection) {
     }
 
     console.log({playerScore, computerScore})
+
+    if(playerScore > computerScore){
+        console.log('You Win')
+        alert('You Win')
+    } else if (playerScore < computerScore){
+        console.log('You Lose')
+        alert('You Lose')
+    } else {
+        console.log('Draw')
+        alert('Draw')
+    }
+
+    if(confirm('Do you want to play again?')){
+        game()
+    }
     
 })();
