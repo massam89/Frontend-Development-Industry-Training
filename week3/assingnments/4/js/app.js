@@ -9,7 +9,7 @@ function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
     computerSelection = computerSelection.toLowerCase();
 
-    if((playerSelection === 'rock' && computerSelection === 'rock') || (playerSelection === 'scissors' && computerSelection === 'scissors') || (playerSelection === 'paper' && computerSelection === 'paper')) {
+    if( playerSelection === computerSelection ) {
         return 'Draw'
     } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
         return 'You lose! scissors beat paper'
