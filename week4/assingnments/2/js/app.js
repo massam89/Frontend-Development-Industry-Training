@@ -32,12 +32,36 @@ function playRound(playerSelection) {
 (function game() {
     const buttons = document.querySelectorAll('button')
     const resultText = document.querySelector('p')
+    let playRoundText;
+    let playerScore = 0
+    let computerScore = 0
 
     buttons.forEach(button => {
         button.addEventListener('click', (e) => {
-            resultText.textContent = playRound(e.target.innerText)
+            playRoundText = playRound(e.target.innerText);
+            if(playRoundText === 'Draw'){
+                resultText.innerHTML = `${playRoundText}<br>Player: ${playerScore}<br>computer: ${computerScore}`
+            } else if (playRoundText.includes('win')){
+                playerScore++
+                resultText.innerHTML = `${playRoundText}<br>Player: ${playerScore}<br>computer: ${computerScore}`
+            } else if (playRoundText.includes('lose')){
+                computerScore++
+                resultText.innerHTML = `${playRoundText}<br>Player: ${playerScore}<br>computer: ${computerScore}`
+            } 
+            
+            if (playerScore === 5){
+                resultText.innerHTML = 'You Win!'
+                playerScore = 0;
+                computerScore = 0;
+            } else if (computerScore === 5) {
+                resultText.innerHTML = 'You Lose!'
+                playerScore = 0
+                computerScore = 0;
+            }           
         })
     })
+
+
 
     
 })();
