@@ -1,11 +1,6 @@
-function computerPlay() {
-    const options = ['Paper', 'Rock', 'Scissors']
-    const randomNum = Math.floor(Math.random() * options.length)
+const computerPlay = () => ['Paper', 'Rock', 'Scissors'][Math.floor(Math.random() * 3)]
 
-    return options[randomNum]
-}
-
-function playRound(playerSelection) {
+const playRound = (playerSelection) => {
 
     playerSelection = playerSelection.toLowerCase();
     let computerSelection = computerPlay().toLowerCase();
@@ -29,7 +24,7 @@ function playRound(playerSelection) {
     }
 }
 
-(function game() {
+const game = (() => {
     const buttons = document.querySelectorAll('button')
     const resultText = document.querySelector('p')
     let playRoundText;
@@ -65,4 +60,3 @@ function playRound(playerSelection) {
 
     
 })();
-
