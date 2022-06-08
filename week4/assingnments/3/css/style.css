@@ -1,0 +1,61 @@
+@import url(./base.css);
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(163, 237, 237);
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 50px;
+    color: rgb(255, 255, 255);
+    background: #fd9535;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.calculator {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    font-size: 2.5rem;
+}
+
+.display {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    color: #FFF;
+    background: #fd9535;
+    border: 1px solid rgb(78, 76, 76);
+    padding-left: 20px;
+    padding-bottom: 5px;
+}
+
+button {
+    width: 25%;
+    height: 60px;
+    font-size: 2rem;
+    color: #FFF;
+    background: #fd9535;
+    border: 1px solid rgb(78, 76, 76);
+    cursor: pointer;
+}
+
+button:hover {
+    background: #d57f2f;
+}
+
+button:active {
+    background: #e1ae7d;
+}
