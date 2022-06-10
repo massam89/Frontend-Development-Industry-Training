@@ -1,5 +1,7 @@
+// Return Random memeber between three option, paper-rock-scissors
 const computerPlay = () => ['Paper', 'Rock', 'Scissors'][Math.floor(Math.random() * 3)]
 
+// Run each round between PC and User and return the result
 const playRound = (playerSelection) => {
     playerSelection = playerSelection.toLowerCase();
     let computerSelection = computerPlay().toLowerCase();
@@ -23,6 +25,7 @@ const playRound = (playerSelection) => {
     }
 }
 
+// Main function, execute at first 
 const game = (() => {
     const buttons = document.querySelectorAll('button')
     const resultTextEl = document.querySelector('p')
@@ -30,13 +33,16 @@ const game = (() => {
     let playerScore = 0
     let computerScore = 0
 
+    // Add listener to each button
     buttons.forEach( button => {
         button.addEventListener('click', (e) => {
             const playRoundText = playRound(e.target.innerText);
 
+            // Calculate player and computer score
             if (playRoundText.includes('win')) playerScore++   
             else if (playRoundText.includes('lose')) computerScore++
             
+            // Show results
             if (playerScore === 5){
                 resultTextEl.innerHTML = 'You Win!'
                 playerScore = 0
