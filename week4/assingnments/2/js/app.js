@@ -1,7 +1,6 @@
 const computerPlay = () => ['Paper', 'Rock', 'Scissors'][Math.floor(Math.random() * 3)]
 
 const playRound = (playerSelection) => {
-
     playerSelection = playerSelection.toLowerCase();
     let computerSelection = computerPlay().toLowerCase();
 
@@ -26,37 +25,29 @@ const playRound = (playerSelection) => {
 
 const game = (() => {
     const buttons = document.querySelectorAll('button')
-    const resultText = document.querySelector('p')
-    let playRoundText;
+    const resultTextEl = document.querySelector('p')
+
     let playerScore = 0
     let computerScore = 0
 
-    buttons.forEach(button => {
+    buttons.forEach( button => {
         button.addEventListener('click', (e) => {
-            playRoundText = playRound(e.target.innerText);
-            if(playRoundText === 'Draw'){
-                resultText.innerHTML = `${playRoundText}<br>Player: ${playerScore}<br>computer: ${computerScore}`
-            } else if (playRoundText.includes('win')){
-                playerScore++
-                resultText.innerHTML = `${playRoundText}<br>Player: ${playerScore}<br>computer: ${computerScore}`
-            } else if (playRoundText.includes('lose')){
-                computerScore++
-                resultText.innerHTML = `${playRoundText}<br>Player: ${playerScore}<br>computer: ${computerScore}`
-            } 
+            const playRoundText = playRound(e.target.innerText);
+
+            if (playRoundText.includes('win')) playerScore++   
+            else if (playRoundText.includes('lose')) computerScore++
             
             if (playerScore === 5){
-                resultText.innerHTML = 'You Win!'
-                playerScore = 0;
-                computerScore = 0;
-            } else if (computerScore === 5) {
-                resultText.innerHTML = 'You Lose!'
+                resultTextEl.innerHTML = 'You Win!'
                 playerScore = 0
-                computerScore = 0;
-            }           
+                computerScore = 0
+            } else if (computerScore === 5) {
+                resultTextEl.innerHTML = 'You Lose!'
+                playerScore = 0
+                computerScore = 0
+            } else {
+                resultTextEl.innerHTML = `${playRoundText}<br>Player: ${playerScore}<br>computer: ${computerScore}`
+            }        
         })
-    })
-
-
-
-    
+    })   
 })();

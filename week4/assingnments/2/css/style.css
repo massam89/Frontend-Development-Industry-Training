@@ -31,12 +31,16 @@ button {
     padding: 23px 50px;
     border: none;
     cursor: pointer;
-    transition: all 0.3s 0s ease-in-out;
+    transition: all 0.1s 0s ease-in-out;
 }
 
 button:hover {
     transform: scale(1.04, 1);
     background-color: rgb(216, 10, 27);
+}
+
+button:active {
+    background-color: rgb(217, 143, 149);
 }
 
 p {
