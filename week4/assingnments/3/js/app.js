@@ -29,10 +29,11 @@ const format = (num, decimals) => num.toLocaleString('en-US', {
     maximumFractionDigits: decimals,
   });
 
-  function getFrequency(string) {
-    var freq = {};
-    for (var i=0; i<string.length;i++) {
-        var character = string.charAt(i);
+// Count the number of character in a specific string
+const getFrequency = (string) => {
+    let freq = {};
+    for (let i=0 ; i<string.length ; i++) {
+        let character = string.charAt(i);
         if (freq[character]) {
            freq[character]++;
         } else {
