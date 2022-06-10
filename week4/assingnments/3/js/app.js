@@ -29,6 +29,20 @@ const format = (num, decimals) => num.toLocaleString('en-US', {
     maximumFractionDigits: decimals,
   });
 
+  function getFrequency(string) {
+    var freq = {};
+    for (var i=0; i<string.length;i++) {
+        var character = string.charAt(i);
+        if (freq[character]) {
+           freq[character]++;
+        } else {
+           freq[character] = 1;
+        }
+    }
+
+    return freq;
+};
+
 const main = (() => {
     const btns = document.querySelectorAll('button')
     const display = document.querySelector('#display')
@@ -43,9 +57,11 @@ const main = (() => {
             if(+e.target.value || e.target.value == 0 || e.target.value == '.') {
                 if(!operator){
                     num1 += e.target.value
+                    if(getFrequency(num1)['.'] > 1) { num1 = num1.slice(0, -1) }
                     display.innerHTML = num1
                 } else {
                     num2 += e.target.value
+                    if(getFrequency(num2)['.'] > 1) { num2 = num2.slice(0, -1) }
                     display.innerHTML = num2
                 }     
             } else {
