@@ -44,6 +44,7 @@ const getFrequency = (string) => {
     return freq;
 };
 
+// Main function, execute at first
 const main = (() => {
     const btns = document.querySelectorAll('button')
     const display = document.querySelector('#display')
@@ -84,7 +85,7 @@ const main = (() => {
                             alert('You can not divid number and zero')
                         }
 
-                        if(result){
+                        if(result || result == 0){
                             if(isInt(result)){
                                 display.innerText = result
                                 num1 = result; num2 = ''; operator = ''
@@ -96,10 +97,86 @@ const main = (() => {
                             result = ''
                         }                                                 
                         break
+                    case 'back':
+
+                        if(!operator) {
+                            num1 = num1.slice(0, -1)
+                            display.innerHTML = num1
+                        } else {
+                            num2 = num2.slice(0, -1)
+                            display.innerHTML = num2
+                            } 
+                        
                     default:
                         break
                 }
             }
         })
+    })
+
+    
+    document.addEventListener('keydown', (e) => {
+        
+        if(+e.key || e.key == 0 || e.key == '.') {
+            if(!operator){
+                num1 += e.key
+                if(getFrequency(num1)['.'] > 1) { num1 = num1.slice(0, -1) }
+                display.innerHTML = num1
+            } else {
+                num2 += e.key
+                if(getFrequency(num2)['.'] > 1) { num2 = num2.slice(0, -1) }
+                display.innerHTML = num2
+            }     
+        } else {
+            switch(e.key) {
+                case 'Escape':
+                    num1 = ''; num2 = ''; operator = ''
+                    display.innerText = 0
+                    break         
+                case '/':
+                    operator = 'divide'
+                    break
+                case '*':
+                    operator = 'multiply'
+                    break
+                case '+':
+                    operator = 'add'
+                    break
+                case '-':
+                    operator = 'subtract'       
+                    break
+                case 'Enter':
+                    console.log({operator, num1, num2})
+                    let result = operate(operator, +num1, +num2)
+
+                    console.log(result)
+                    if (result === Infinity){
+                        alert('You can not divid number and zero')
+                    }
+
+                    if(result || result == 0){
+                        if(isInt(result)){
+                            display.innerText = result
+                            num1 = result; num2 = ''; operator = ''
+                        } else {
+                            display.innerText = format(result, 2)
+                            num1 = result; num2 = ''; operator = ''
+                        }
+                    } else {
+                        result = ''
+                    }                                                 
+                    break
+                case 'Backspace':
+                    if(!operator) {
+                        num1 = num1.slice(0, -1)
+                        display.innerHTML = num1
+                    } else {
+                        num2 = num2.slice(0, -1)
+                        display.innerHTML = num2
+                    } 
+                default:
+                    break
+            }
+        }
     })
 })();
