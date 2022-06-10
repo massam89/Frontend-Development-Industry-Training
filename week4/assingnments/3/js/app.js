@@ -1,8 +1,10 @@
+// Define function for each operator for two input numbers
 const add = (num1, num2) => num1 + num2;
 const subtract = (num1, num2) => num1 - num2;
 const multiply = (num1, num2) => num1 * num2;
 const divide = (num1, num2) => num1 / num2;
 
+// operate between two numbers, with four function, add, subtract, multiply and divide
 const operate = (operator, num1, num2) => {
     switch(operator){
         case 'add':
@@ -18,8 +20,10 @@ const operate = (operator, num1, num2) => {
     }
 }
 
+// Check the input is Integer or not
 const isInt = (n) => Number(n) === n && n % 1 === 0
 
+// Format number with specific decimal point
 const format = (num, decimals) => num.toLocaleString('en-US', {
     minimumFractionDigits: decimals,
     maximumFractionDigits: decimals,
@@ -57,7 +61,6 @@ const main = (() => {
                         operator = e.target.value
                         break
                     case 'equal':
-
                         let result = operate(operator, +num1, +num2)
 
                         if (result === Infinity){
@@ -69,7 +72,7 @@ const main = (() => {
                                 display.innerText = result
                                 num1 = result; num2 = ''; operator = ''
                             } else {
-                                display.innerText = format(result, 5)
+                                display.innerText = format(result, 2)
                                 num1 = result; num2 = ''; operator = ''
                             }
                         } else {
