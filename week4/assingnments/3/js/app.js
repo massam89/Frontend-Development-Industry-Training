@@ -81,7 +81,7 @@ const main = (() => {
                     case 'equal':
                         let result = operate(operator, +num1, +num2)
 
-                        if (result === Infinity){
+                        if (result === Infinity || result === -Infinity){
                             alert('You can not divid number and zero')
                         }
 

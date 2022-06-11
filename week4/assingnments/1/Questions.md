@@ -45,7 +45,7 @@ myArray[2] = 'new Element value'
 ## 12.What is the DOM?
 `The Document Object Model is a cross-platform and language-independent interface that treats an XML or HTML document as a tree structure wherein each node is an object representing a part of the document. The DOM represents a document with a logical tree`
 ## 13.How do you target the nodes you want to work with?
-`Bye select element, with querySelector or getById and etc`
+`By select element, with querySelector or getById and etc`
 ## 14.How do you create an element in the DOM?
 `document.createElement('element')`
 ## 15.How do you add an element to the DOM?
