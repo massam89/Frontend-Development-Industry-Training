@@ -33,7 +33,7 @@ const game = (() => {
     let playerScore = 0
     let computerScore = 0
 
-    // Add listener to each button
+    // Add eventListener to each button
     buttons.forEach( button => {
         button.addEventListener('click', (e) => {
             const playRoundText = playRound(e.target.innerText);

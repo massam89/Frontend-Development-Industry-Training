@@ -53,7 +53,7 @@ const main = (() => {
     let num2 = '';
     let operator = '';
     
-    btns.forEach(btn => {
+    btns.forEach( btn => {
         btn.addEventListener('click', (e) => {
 
             if(+e.target.value || e.target.value == 0 || e.target.value == '.') {
@@ -113,8 +113,7 @@ const main = (() => {
             }
         })
     })
-
-    
+  
     document.addEventListener('keydown', (e) => {
         
         if(+e.key || e.key == 0 || e.key == '.') {
@@ -146,10 +145,8 @@ const main = (() => {
                     operator = 'subtract'       
                     break
                 case 'Enter':
-                    console.log({operator, num1, num2})
                     let result = operate(operator, +num1, +num2)
 
-                    console.log(result)
                     if (result === Infinity){
                         alert('You can not divid number and zero')
                     }
